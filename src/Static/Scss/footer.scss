@@ -1,0 +1,110 @@
+$backgroundColor:#21252b;
+$navLinkCOlor:#e7f0ff;
+$navLinkCOlorhover:#8e9db8;
+$navlinkunderlineHover:rgb(0, 153, 255);
+
+
+.footer_section{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    height: 60vh;
+    background-color: rgba(70, 70, 70, 0.411);
+}
+.innerfooter_section{
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    width: 80%;
+    justify-content: space-between;
+   .section_naviagtion_section_left ul li{
+       list-style: none;
+       padding: 10px 5px;
+       margin: 8px;
+      color: antiquewhite;
+      .link_css_styling{
+          color: white;
+          text-underline-offset: 10px;
+          &:hover{
+            color: $navlinkunderlineHover;
+          }
+      }
+}
+}
+.copyright-section-bottom{
+   width: 80%;
+   margin: 30px 17%;
+   color: $navLinkCOlorhover;
+}
+@mixin transitioneffecthover {
+    transition-delay: .1s;
+    transition-duration: .5s;
+    -ms-transform: skewX(0.02turn);
+    -webkit-transform: skewX(0.02turn);
+    transform: skewX(0.02turn);
+}
+@mixin transitioneffect {
+    width: 70px;
+    position: absolute;
+    -ms-transform: skewX(-0.02turn);
+    -webkit-transform: skewX(-0.02turn);
+    transform: skewX(-0.02turn);
+}
+.social_media_list ul{
+    display: flex;
+    margin-top: 50px;
+    li{
+        zoom: 0.8;
+        list-style: none;
+        width: 60px;
+        height: 60px;
+        margin: 20px;
+        position: relative;
+        &:hover{
+            .parallerogram_skew-left{
+                background-color: $navlinkunderlineHover;
+                @include transitioneffecthover;
+            }
+            .parallerogram_skew_right{
+                background-color: #8e9db8;
+                @include transitioneffecthover;
+            }
+        }
+    }
+}
+@mixin frame_icon {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 10;
+
+}
+.frame_linked{
+    @include frame_icon;
+    background-image:url("../assets/linkedin.png") ;
+}
+.frame_facebook{
+    @include frame_icon;
+  background-image: url("../assets/facebook.png");
+}
+.frame_insta{
+    @include frame_icon;
+  background-image: url("../assets/insta.png");
+}
+.parallerogram_skew_right{
+    @include transitioneffect;
+    height: 42px;
+    top:20px;
+    z-index: -1;
+    background: $navlinkunderlineHover;
+}
+.parallerogram_skew-left{
+  @include transitioneffect;
+  height: 45px;
+  top: -20px; 
+  background: #8e9db8;
+}

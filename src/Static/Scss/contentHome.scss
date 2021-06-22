@@ -1,0 +1,86 @@
+$backgroundColor:#21252b;
+$navLinkCOlor:#e7f0ff;
+$navLinkCOlorhover:#8e9db8;
+$navlinkunderlineHover:rgb(0, 153, 255);
+
+
+@mixin frame_basic{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 15px;
+}
+.content_app_description{
+    width: 90%;
+    min-height:70vh ;
+    margin: 2vh auto;
+    display: flex;
+    flex-direction: row;
+    flex: 2;
+}
+.frame1{
+    @include frame_basic;
+    width: 95%;
+    margin: 0 auto;
+    height: 100%;
+    background-image: url("../assets/Visual-website-home1-1024x614.png");
+}
+.content_app_image{
+    width: 60%;
+    height: auto;
+}
+.content_app_info{
+    width: 40%;
+    display: inline-block;
+    position: relative;
+    margin: 20vh auto;
+}
+.dark_bold_heading{
+    color:$navlinkunderlineHover;
+    font-size: calc(15px + 3vmin);
+    font-weight: 600;
+    margin: 5px auto;
+}
+.light_content{
+    color:$navLinkCOlorhover;
+    font-size: calc(12px + 1vmin);
+}
+.download_link_images{
+    display: flex;
+    flex: 2;
+    width: 80%;
+    margin: 0 auto; 
+    justify-content: space-around;
+}
+.frame3_down_footer{
+    @include frame_basic;
+    height: 70px;
+    width: 400px;
+    margin: 30px 0;
+    background-image: url("../assets/gpay.jpg");
+    cursor: pointer;
+}
+.frame2_down_footer{
+    @include frame_basic;
+    height: 70px;
+    width: 400px;
+    margin: 30px 0;
+    background-image: url("../assets/appstore.png");
+    cursor: pointer;
+}
+.frame2{
+    @include frame_basic;
+    height: 50px;
+    width:200px;
+    margin: 30px 0;
+    background-image: url("../assets/appstore.png");
+    cursor: pointer;
+}
+.frame3{
+    @include frame_basic;
+    height: 50px;
+    width: 200px;
+    margin: 30px 0;
+    background-image: url("../assets/gpay.jpg");
+    cursor: pointer;
+}
