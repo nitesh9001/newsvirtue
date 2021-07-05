@@ -79,6 +79,10 @@ class Footer extends Component {
                 </li>
               </ul>
             </div>
+            <div className="sucribemodel">
+              <input placeholder="Email to Suscribe News" type="text" />
+              <button>Suscribe</button>
+            </div>
           </div>
         </div>
       </div>

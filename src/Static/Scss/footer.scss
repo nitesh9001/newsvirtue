@@ -6,9 +6,12 @@ $navlinkunderlineHover:rgb(0, 153, 255);
 
 .footer_section{
     display: block;
-    width: 100%;
+    width: 90%;
+    height: 80vh;
     margin: 0 auto;
-    height: 60vh;
+    position: relative;
+    bottom: 0;
+    transform: skewX(-5deg);
     background-color: rgba(70, 70, 70, 0.411);
 }
 .innerfooter_section{
@@ -21,7 +24,7 @@ $navlinkunderlineHover:rgb(0, 153, 255);
        list-style: none;
        padding: 10px 5px;
        margin: 8px;
-      color: antiquewhite;
+       color: antiquewhite;
       .link_css_styling{
           color: white;
           text-underline-offset: 10px;
@@ -107,4 +110,35 @@ $navlinkunderlineHover:rgb(0, 153, 255);
   height: 45px;
   top: -20px; 
   background: #8e9db8;
+}
+.sucribemodel{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    input{
+        width: 70%;
+        height: 35px;
+        border: none;
+        outline: none;
+        padding-left: 5px;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+        font-weight: 600;
+        color: $navlinkunderlineHover;
+        &:focus{
+           border-left: 3px solid $navlinkunderlineHover ; 
+        }
+    }
+    button{
+        width: 35%;
+        height: 38px;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+        background-color:$navlinkunderlineHover ;
+        cursor: pointer;
+        color: white;
+        font-weight: 600;
+        outline:none;
+        border: none;
+    }
 }

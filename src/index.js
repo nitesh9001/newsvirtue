@@ -6,6 +6,8 @@ import "./Static/Scss/contentHome.scss";
 import "./Static/Scss/verticleSlier.scss";
 import "./Static/Scss/rating.scss";
 import "./Static/Scss/footer.scss";
+import "./Static/Scss/carrier.scss";
+import "./Static/Scss/onemiuteRead.scss";
 import reportWebVitals from "./reportWebVitals";
 import Router from "./router";
 
