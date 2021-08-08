@@ -13,13 +13,16 @@ $navlinkunderlineHover:rgb(0, 153, 255);
     align-items: center;
     margin:  5% auto;
 }
-
 .rating_section{
    width: 100vw;
    height: 100vh;
    position: relative;
    bottom: 0;
    background-color: $backgroundColor;
+   @media screen and (max-width: "900px") {
+   height: auto;
+
+   }
 }
 .wrapper_section{
     width: 100%;
@@ -36,12 +39,25 @@ $navlinkunderlineHover:rgb(0, 153, 255);
     display: flex;
     width: 80%;
     margin: 8% auto;
-    flex: 3;
     height: auto;
     justify-content: center;
 
+    @media screen and (max-width: "900px") {
+    width: 90%;
+    flex-direction: column;
+    }
+    
     .div_section{
     width: 30%;
+    @media screen and (max-width: "900px") {
+        width: 50%;
+    margin:30px auto;
+
+    }
+    @media screen and (max-width: "425px") {
+        width: 80%;
+        
+    }
     cursor: pointer;
     box-shadow: 0 4px 18px rgba(102, 149, 192, 0.47);
     height:250px;

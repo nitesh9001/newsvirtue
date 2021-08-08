@@ -7,15 +7,27 @@ $navlinkunderlineHover:rgb(0, 153, 255);
 .top_positon_one_read{
    width: 98%;
    margin: 9% auto;
+   @media screen and (max-width: "1200px") {
+      width: 100% !important;
+      margin-top: 100px !important;
+      }
+}
+.grid_responive{
+   @media screen and (max-width: "425px") {
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: row;
+   }
 }
 .header_news_slider{
    background-color:$navlinkunderlineHover;
    display: flex;
    width: 100%;
    height: 50px;
-   margin: 15px auto;
+   margin: 30px auto;
    flex-direction: row;
    justify-content: flex-start;
+  
    .header_title{
       width: 20%;
       text-align: center;
@@ -29,21 +41,34 @@ $navlinkunderlineHover:rgb(0, 153, 255);
          transform:skewy(-4deg);
          font-weight: 600;
          background-color: red;
+         padding: 5px;
          p{
             margin-top: 15px;
             text-align: center;
             vertical-align: middle;
          }
       }
+      @media screen and (max-width: "665px") {
+         width: 20% !important;
+      
+         zoom: 0.7;
+      }
    }
    .news_header_content{
       width: 70%;
       color: white;
+      @media screen and (max-width: "665px") {
+         width: 75% !important;
+         zoom: 0.8;
+      }
    }
    .changer_next_prev{
      width: 10%;
      float: right;
      margin-left: 25px;
+     @media screen and (max-width: "665px") {
+      display: none;
+   }
      button{
           background-color: rgba(139, 209, 255, 0.541);
           border: none;
@@ -57,21 +82,45 @@ $navlinkunderlineHover:rgb(0, 153, 255);
           }
      }
    }
+   @media screen and (max-width: "1200px") {
+      width: 100vw !important;
+      margin-top: 100px !important;
+   }
+   
 }
 .wrapper_for_flex_head_card{
    display: flex;
    width: 100%;
    justify-content: center;
    margin: 0 auto;
+   @media screen and (max-width: "1280px") {
+      width: 100% !important;
+      zoom: 0.7;
+   }
+   @media screen and (max-width: "768px") {
+      width: 96% !important;
+      zoom: 0.5;
+   }
+   @media screen and (max-width: "665px") {
+      width: 96% !important;
+      display: block;
+   zoom: 1;
+   }
 } 
 .wrapper_for_flex_head_card_left{
   width: 25%;
   margin: 0 auto;
+  @media screen and (max-width: "665px") {
+     width:80%;
+
+  }
 }
 .wrapper_for_flex_head_card_mid{
    width: 50%;
-   border:1px solid red;
    margin: 0 auto;
+   @media screen and (max-width: "665px") {
+      width:80%;
+   }
 }
 .main_card_warpper_mid{
    position: relative;
@@ -90,7 +139,9 @@ $navlinkunderlineHover:rgb(0, 153, 255);
   height:230px;
   margin: 3px auto;
   border: 2px solid grey;
-
+  @media screen and (max-width: "665px") {
+   width:100%;
+}
 }
 .wraper_hover_filter{
    // width: 300px;
@@ -107,6 +158,9 @@ $navlinkunderlineHover:rgb(0, 153, 255);
    transition: 1s;
    overflow: hidden;
    display: block;
+   @media screen and (max-width: "665px") {
+      width:100%;
+   }
 }
 .card_news_slide_mid{
    width: 100%;
@@ -174,4 +228,52 @@ $navlinkunderlineHover:rgb(0, 153, 255);
    color: white;
    text-decoration-line: underline;
    text-shadow: 0 1px 5px black;
+}
+.header_news_tavb_scroll{
+   margin: 8vh auto;
+   width: 95%;
+   display: flex;
+   flex-direction: row; 
+   @media screen and (max-width: "1200px") {
+      flex-direction: column; 
+
+   }
+}
+.header_news_tavb_scroll_flex.left{
+    width: 25%;
+    margin: 0 auto;
+    @media screen and (max-width: "1200px") {
+      width: 90%;
+
+   }
+}
+.header_news_tavb_scroll_flex.right{
+   width: 72%;
+   @media screen and (max-width: "1200px") {
+      width: 95%;
+      margin: 0 auto;
+
+   }
+}
+.top_border{
+   padding: 5px;
+   border: 0.5px solid rgba(0, 0, 0, 0.212);
+}
+.text_follow_width{
+   margin: 20px auto;
+}
+.text_follow{
+   color: white;
+   font-family:Arial, Helvetica, sans-serif;
+   font-size: 18px;
+
+}
+.div_heading_title{
+   font-size: 20px;
+font-weight: "bold";
+padding-left: 10px;
+border-left: 3px solid white;
+@media screen and (max-width: "768px") {
+   font-size: 18px;
+}
 }

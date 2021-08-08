@@ -1,7 +1,7 @@
 $backgroundColor:#21252b;
 $navLinkCOlor:#e7f0ff;
 $navLinkCOlorhover:#8e9db8;
-$navlinkunderlineHover:rgb(0, 153, 255);
+$navlinkunderlineHover:#0099ff;
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -42,7 +42,13 @@ body {
   .app-header-logo {
     width: 30%;
     margin-left: 15px;
-    margin-right: 15px;
+    margin-right: 15px; 
+    @media screen and (max-width: "768px") {
+      width: 230px;
+    } 
+    @media screen and (max-width: "450px") {
+      zoom: 0.7;
+    }      
   }
   .frame6,
   .frame-logo {
@@ -74,3 +80,80 @@ body {
 .positon_center{
   margin-top: 5% ;
 }
+
+.animation_air{
+  animation: mymove 2s 1s ;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-delay: 0.5s;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+
+}
+@keyframes mymove {
+  0% {
+    transform: translate(2px,-2px);
+  }
+  50% {
+    transform: translate(-2px,2px);
+  }
+  100% {
+      transform: translate(2px,-2px);
+    }
+}
+.animartion-circle2{
+  margin: 5px auto; width: 60px !important;
+  height: 60px !important;
+  opacity: 0.5 !important;
+
+}
+.animartion-circle3{
+  margin: 5px auto; 
+  width: 40px !important;
+  height: 40px !important;
+  opacity: 0.8 !important;
+}
+.animartion-circle1,
+.animartion-circle2,
+.animartion-circle3{
+  margin: 5px auto;
+  border:2px solid $navlinkunderlineHover ;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation-fill-mode: both;
+  animation:grow 5s 1;
+  opacity: 0.6 ;
+
+  animation-iteration-count: infinite;
+}
+.animartion-circle{
+  position: absolute;
+  border:2px solid $navlinkunderlineHover;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  opacity: 1;
+  padding: 0;
+  animation-fill-mode: both;
+  animation:grow 3s 1;
+  animation-iteration-count: infinite;
+}
+@keyframes grow {
+  0% {
+  -webkit-transform: scale( 0 );-moz-transform: scale( 0 );-o-transform: scale( 0 );-ms-transform: scale( 0 );transform: scale( 0 );
+   }
+   
+   50% {
+   -webkit-transform: scale( .9 );-moz-transform: scale( 1 );-o-transform: scale( 1 );-ms-transform: scale( 1 );transform: scale( 1 );
+   }
+   
+   100% {
+   -webkit-transform: scale( 0.8 );-moz-transform: scale( 0.8 );-o-transform: scale( 0.8 );-ms-transform: scale( 0.8 );transform: scale( 0 );
+   }
+ }
+ .main_div_blog{
+   position: relative;
+   overflow: hidden !important;
+ }
+ 

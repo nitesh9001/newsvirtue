@@ -12,11 +12,23 @@ $navlinkunderlineHover:rgb(0, 153, 255);
 }
 .content_app_description{
     width: 90%;
-    min-height:70vh ;
+    min-height:70vh;
     margin: 2vh auto;
     display: flex;
     flex-direction: row;
     flex: 2;
+    justify-content: center;
+
+    @media screen and (max-width: "1000px") {
+    width: 80%;
+    height:  auto;
+    }
+    @media screen and (max-width: "800px") {
+       width: 80%;
+      margin: 4vh auto;
+      flex-direction: column;
+      justify-content: flex-start;
+}
 }
 .frame1{
     @include frame_basic;
@@ -28,12 +40,24 @@ $navlinkunderlineHover:rgb(0, 153, 255);
 .content_app_image{
     width: 60%;
     height: auto;
+    @media screen and (max-width: "800px") {
+    height: 60vh;
+    width: 90%;
+    }
+    @media screen and (max-width: "450px") {
+    height: 30vh;
+    margin: 5vh auto;
+    }
 }
 .content_app_info{
     width: 40%;
     display: inline-block;
     position: relative;
     margin: 20vh auto;
+    @media screen and (max-width: "800px") {
+        width: 90%;
+        margin: 1vh auto;
+        }
 }
 .dark_bold_heading{
     color:$navlinkunderlineHover;
@@ -51,6 +75,12 @@ $navlinkunderlineHover:rgb(0, 153, 255);
     width: 80%;
     margin: 0 auto; 
     justify-content: space-around;
+    @media screen and (max-width: "450px") {
+    width: 100%;
+    margin: 1vh auto;
+    justify-content: center;
+     flex-direction: column !important;
+    }
 }
 .frame3_down_footer{
     @include frame_basic;
@@ -59,6 +89,7 @@ $navlinkunderlineHover:rgb(0, 153, 255);
     margin: 30px 0;
     background-image: url("../assets/gpay.jpg");
     cursor: pointer;
+   
 }
 .frame2_down_footer{
     @include frame_basic;
@@ -83,4 +114,5 @@ $navlinkunderlineHover:rgb(0, 153, 255);
     margin: 30px 0;
     background-image: url("../assets/gpay.jpg");
     cursor: pointer;
+   
 }
