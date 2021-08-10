@@ -10,7 +10,7 @@ import "./Static/Scss/carrier.scss";
 import "./Static/Scss/onemiuteRead.scss";
 import reportWebVitals from "./reportWebVitals";
 import Router from "./router";
-import * as ServiceWorker from "./serviceworker";
+import * as ServiceWorker from "./service-worker";
 ReactDOM.render(
   <React.StrictMode>
     <Router />
